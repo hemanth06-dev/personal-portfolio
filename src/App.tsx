@@ -1,30 +1,28 @@
 import React from 'react';
-import { ThemeProvider } from './components/ThemeProvider';
-import { ThemeToggle } from './components/ThemeToggle';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import { About } from './components/sections/About';
-import { Skills } from './components/sections/Skills/Skills';
-import { Experience } from './components/sections/Experience';
+import About from './components/About';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
-import { Contact } from './components/sections/Contact';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors">
-        <ThemeToggle />
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Contact />
-        </main>
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+      <footer className="bg-gray-900 text-white py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
   );
 }
 
