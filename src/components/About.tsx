@@ -1,34 +1,10 @@
 import React from 'react';
-import { Code2, Server, Layout, Database } from 'lucide-react';
+import { FrontendIcon, BackendIcon, DatabaseIcon, DevOpsIcon } from './icons/SkillIcons';
+
+// Move skills data to a separate file for better organization
+import { skillsData } from '../data/skillsData';
 
 const About = () => {
-  const skills = [
-    {
-      icon: <Code2 size={24} />,
-      title: 'Frontend Development',
-      description: 'Expert in React.js and Angular, creating responsive and interactive user interfaces',
-      technologies: ['React', 'Angular', 'TypeScript', 'Tailwind CSS']
-    },
-    {
-      icon: <Server size={24} />,
-      title: 'Backend Development',
-      description: 'Building robust server-side applications with Java and Spring Boot',
-      technologies: ['Java', 'Spring Boot', 'Hibernate', 'RESTful APIs']
-    },
-    {
-      icon: <Database size={24} />,
-      title: 'Database Management',
-      description: 'Designing and optimizing database structures for scalable applications',
-      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis']
-    },
-    {
-      icon: <Layout size={24} />,
-      title: 'UI/UX Design',
-      description: 'Creating intuitive and user-friendly interfaces with modern design principles',
-      technologies: ['Figma', 'Material UI', 'Bootstrap', 'Responsive Design']
-    }
-  ];
-
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -43,10 +19,10 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {skills.map((skill, index) => (
+          {skillsData.map((skill, index) => (
             <div key={index} className="p-6 rounded-lg border border-gray-200 hover:border-blue-500 transition-colors">
               <div className="flex items-center gap-4 mb-4">
-                <div className="text-blue-600">{skill.icon}</div>
+                {skill.icon}
                 <h3 className="text-xl font-semibold">{skill.title}</h3>
               </div>
               <p className="text-gray-600 mb-4">{skill.description}</p>

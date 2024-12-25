@@ -46,8 +46,13 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <div key={index} className="mb-12 relative pl-8">
-              <div className="absolute left-0 top-0 h-full w-px bg-blue-200" />
-              <div className="absolute left-[-8px] top-2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white" />
+              {/* Timeline line - now extends to the bottom of the container */}
+              {index !== experiences.length - 1 && (
+                <div className="absolute left-0 top-2 h-[calc(100%+3rem)] w-px bg-blue-200" />
+              )}
+              
+              {/* Timeline dot */}
+              <div className="absolute left-[-8px] top-2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white z-10" />
               
               <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-4 mb-4">
