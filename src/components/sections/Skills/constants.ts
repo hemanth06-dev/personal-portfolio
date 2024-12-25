@@ -12,10 +12,12 @@ export const skillsConfig = {
       icon: Code2,
       description: 'Building responsive and interactive user interfaces',
       skills: [
-        { name: 'React/Next.js', level: 90 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'Tailwind CSS', level: 90 },
-        { name: 'Redux/State Management', level: 85 }
+        { name: 'React/Next.js' },
+        { name: 'TypeScript' },
+        { name: 'Tailwind CSS' },
+        { name: 'Redux' },
+        { name: 'HTML/CSS' },
+        { name: 'JavaScript' }
       ]
     },
     {
@@ -23,10 +25,12 @@ export const skillsConfig = {
       icon: Server,
       description: 'Server-side development and API design',
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'REST APIs', level: 85 },
-        { name: 'PostgreSQL', level: 80 }
+        { name: 'Node.js' },
+        { name: 'Python' },
+        { name: 'REST APIs' },
+        { name: 'PostgreSQL' },
+        { name: 'Express.js' },
+        { name: 'MongoDB' }
       ]
     },
     {
@@ -34,10 +38,12 @@ export const skillsConfig = {
       icon: GitBranch,
       description: 'Development operations and deployment',
       skills: [
-        { name: 'Git/GitHub', level: 90 },
-        { name: 'Docker', level: 75 },
-        { name: 'CI/CD', level: 80 },
-        { name: 'Cloud Services', level: 75 }
+        { name: 'Git/GitHub' },
+        { name: 'Docker' },
+        { name: 'CI/CD' },
+        { name: 'AWS' },
+        { name: 'Linux' },
+        { name: 'Kubernetes' }
       ]
     }
   ],
@@ -47,10 +53,12 @@ export const skillsConfig = {
       icon: Brain,
       description: 'Building and training ML models',
       skills: [
-        { name: 'TensorFlow', level: 80 },
-        { name: 'Scikit-learn', level: 85 },
-        { name: 'PyTorch', level: 75 },
-        { name: 'Model Training', level: 80 }
+        { name: 'TensorFlow' },
+        { name: 'Scikit-learn' },
+        { name: 'PyTorch' },
+        { name: 'Keras' },
+        { name: 'Model Training' },
+        { name: 'Feature Engineering' }
       ]
     },
     {
@@ -58,10 +66,12 @@ export const skillsConfig = {
       icon: BarChart,
       description: 'Data analysis and visualization',
       skills: [
-        { name: 'Pandas', level: 85 },
-        { name: 'NumPy', level: 80 },
-        { name: 'Data Visualization', level: 85 },
-        { name: 'Statistical Analysis', level: 75 }
+        { name: 'Pandas' },
+        { name: 'NumPy' },
+        { name: 'Data Visualization' },
+        { name: 'Statistical Analysis' },
+        { name: 'Matplotlib' },
+        { name: 'Seaborn' }
       ]
     },
     {
@@ -69,10 +79,12 @@ export const skillsConfig = {
       icon: Network,
       description: 'Neural networks and deep learning',
       skills: [
-        { name: 'Neural Networks', level: 80 },
-        { name: 'Computer Vision', level: 75 },
-        { name: 'NLP', level: 75 },
-        { name: 'Transfer Learning', level: 70 }
+        { name: 'Neural Networks' },
+        { name: 'Computer Vision' },
+        { name: 'NLP' },
+        { name: 'Transfer Learning' },
+        { name: 'CNN' },
+        { name: 'RNN' }
       ]
     },
     {
@@ -80,10 +92,12 @@ export const skillsConfig = {
       icon: Database,
       description: 'ML operations and deployment',
       skills: [
-        { name: 'ML Pipelines', level: 75 },
-        { name: 'Model Deployment', level: 70 },
-        { name: 'Model Monitoring', level: 70 },
-        { name: 'Model Optimization', level: 75 }
+        { name: 'ML Pipelines' },
+        { name: 'Model Deployment' },
+        { name: 'Model Monitoring' },
+        { name: 'Model Optimization' },
+        { name: 'MLflow' },
+        { name: 'DVC' }
       ]
     }
   ]

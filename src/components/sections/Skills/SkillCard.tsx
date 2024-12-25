@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SkillBar } from './SkillBar';
 import type { SkillCategory } from './types';
 
 export const SkillCard = ({ title, skills, icon: Icon, description }: SkillCategory) => {
@@ -20,9 +19,14 @@ export const SkillCard = ({ title, skills, icon: Icon, description }: SkillCateg
           <p className="text-sm text-gray-600">{description}</p>
         </div>
       </div>
-      <div className="space-y-4">
+      <div className="flex flex-wrap gap-2">
         {skills.map((skill) => (
-          <SkillBar key={skill.name} {...skill} />
+          <span
+            key={skill.name}
+            className="px-3 py-1 bg-gray-100 rounded-full text-sm hover:bg-gray-200 transition-colors"
+          >
+            {skill.name}
+          </span>
         ))}
       </div>
     </motion.div>

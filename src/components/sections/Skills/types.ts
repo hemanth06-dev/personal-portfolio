@@ -1,11 +1,10 @@
 export interface Skill {
   name: string;
-  level: number;
 }
 
 export interface SkillCategory {
   title: string;
   skills: Skill[];
-  icon: string;
+  icon: any; // LucideIcon type
   description: string;
 }
