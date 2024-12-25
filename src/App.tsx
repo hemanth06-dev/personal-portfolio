@@ -1,4 +1,6 @@
 import React from 'react';
+import { ThemeProvider } from './components/ThemeProvider';
+import { ThemeToggle } from './components/ThemeToggle';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import { About } from './components/sections/About';
@@ -9,17 +11,20 @@ import { Contact } from './components/sections/Contact';
 
 function App() {
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-    </div>
+    <ThemeProvider>
+      <div className="bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors">
+        <ThemeToggle />
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 
