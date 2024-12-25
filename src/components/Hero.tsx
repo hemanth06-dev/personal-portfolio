@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, FileDown } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -21,10 +21,12 @@ const Hero = () => {
               <ArrowRight size={20} />
             </a>
             <a 
-              href="#contact"
-              className="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition-colors"
+              href="/path-to-your-resume.pdf"
+              download
+              className="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition-colors flex items-center gap-2"
             >
-              Get in Touch
+              Download Resume
+              <FileDown size={20} />
             </a>
           </div>
         </div>
