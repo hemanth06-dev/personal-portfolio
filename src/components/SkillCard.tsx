@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { SkillItem } from './SkillItem';
 
 interface SkillCardProps {
   title: string;
@@ -24,16 +25,11 @@ export function SkillCard({ title, skills, icon, delay = 0, className = '' }: Sk
       </div>
       <ul className="space-y-3">
         {skills.map((skill, index) => (
-          <motion.li
-            key={index}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: delay + (index * 0.1) }}
-            className="text-gray-600 dark:text-gray-300 flex items-center gap-2"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
-            {skill}
-          </motion.li>
+          <SkillItem 
+            key={skill} 
+            skill={skill} 
+            delay={delay + (index * 0.1)} 
+          />
         ))}
       </ul>
     </motion.div>

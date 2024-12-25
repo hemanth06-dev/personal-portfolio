@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Terminal, Code2, Database, Cloud } from 'lucide-react';
+import { HeroIcons } from './HeroIcons';
+import { SocialLinks } from './SocialLinks';
 
 export function Hero() {
   return (
@@ -12,12 +13,7 @@ export function Hero() {
         transition={{ duration: 0.6 }}
         className="text-center relative z-10"
       >
-        <div className="flex items-center justify-center space-x-3 mb-6">
-          <Terminal className="w-8 h-8 text-blue-500" />
-          <Code2 className="w-8 h-8 text-green-500" />
-          <Database className="w-8 h-8 text-purple-500" />
-          <Cloud className="w-8 h-8 text-orange-500" />
-        </div>
+        <HeroIcons />
 
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -47,35 +43,7 @@ export function Hero() {
           the fascinating world of Machine Learning and AI.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="flex justify-center gap-6"
-        >
-          <a 
-            href="https://github.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            <Github className="w-7 h-7" />
-          </a>
-          <a 
-            href="https://linkedin.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            <Linkedin className="w-7 h-7" />
-          </a>
-          <a 
-            href="mailto:your.email@example.com"
-            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            <Mail className="w-7 h-7" />
-          </a>
-        </motion.div>
+        <SocialLinks />
       </motion.div>
     </div>
   );
