@@ -1,101 +1,53 @@
 import React from 'react';
-import { Mail, Linkedin, Github, Send } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Container } from './ui/Container';
+import { Mail, MessageSquare, ArrowRight } from 'lucide-react';
 
-const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-  };
-
+export const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Get in Touch</h2>
-        
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
-            <p className="text-gray-600 mb-8">
-              I'm always interested in hearing about new projects and opportunities. 
-              Feel free to reach out through any of these channels.
+    <section className="py-20" id="contact">
+      <Container>
+        <div className="max-w-3xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-block p-3  text-green-500 rounded-2xl mb-6">
+              <MessageSquare size={32} />
+            </div>
+            <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Let's Work Together</h2>
+            <p className=" text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+              I'm always interested in hearing about new projects and opportunities.
+              Whether you have a question or just want to say hi, feel free to reach out!
             </p>
             
-            <div className="space-y-4">
-              <a 
-                href="mailto:your.email@example.com" 
-                className="flex items-center gap-4 text-gray-600 hover:text-blue-600 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.a
+                href="mailto:your@email.com"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full
+                 px-6 py-3 hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105"
               >
                 <Mail size={20} />
-                your.email@example.com
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                className="flex items-center gap-4 text-gray-600 hover:text-blue-600 transition-colors"
+                Send Email
+              </motion.a>
+              
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full
+                 px-6 py-3 hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105"
               >
-                <Linkedin size={20} />
-                LinkedIn Profile
-              </a>
-              <a 
-                href="https://github.com" 
-                className="flex items-center gap-4 text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <Github size={20} />
-                GitHub Profile
-              </a>
+                View Resume
+                <ArrowRight size={20} />
+              </motion.a>
             </div>
-          </div>
-          
-          {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required
-              />
-            </div>
-            
-            <button
-              type="submit"
-              className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
-            >
-              Send Message
-              <Send size={20} />
-            </button>
-          </form>
+          </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
-
-export default Contact;
