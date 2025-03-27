@@ -4,9 +4,9 @@ import { Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Solutions Inc.",
-      period: "2022 - Present",
+      title: "Senior Software Engineer",
+      company: "Harman connected services",
+      period: "Dec 2022 - Aug 2023",
       description: [
         "Led a team of 5 developers in building enterprise-level web applications",
         "Implemented microservices architecture using Spring Boot and React",
@@ -15,9 +15,9 @@ const Experience = () => {
       ],
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Innovations Ltd.",
-      period: "2020 - 2022",
+      title: "Software Developer",
+      company: "Harman connected services",
+      period: "Dec 2021 - Dec 2022",
       description: [
         "Developed and maintained multiple client-facing applications using Angular and Java",
         "Implemented RESTful APIs and integrated third-party services",
@@ -26,9 +26,9 @@ const Experience = () => {
       ],
     },
     {
-      title: "Junior Developer",
-      company: "StartUp Tech",
-      period: "2019 - 2020",
+      title: "Engineer",
+      company: "Virtusa Connected Services",
+      period: "Aug 2019 - Dec 2021",
       description: [
         "Assisted in developing frontend components using React.js",
         "Worked on bug fixes and feature implementations",
@@ -39,7 +39,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 px-4">
       <div className="container mx-auto px-4">
         <h2
           className="text-3xl md:text-4xl font-bold text-center mb-16

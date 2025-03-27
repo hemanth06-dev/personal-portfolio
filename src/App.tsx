@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Header from './components/Header';
 import { Contact } from './components/Contact';
 import Skills from './components/skills';
+import Projects from './components/Projects';
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <About />
       <Skills />
       <Experience />
+      {/* <Projects/> */}
       <Contact/>
     </div>
   );

@@ -3,8 +3,8 @@ import { skillsData } from "../data/skillsData";
 
 const skills = () => {
   return (
-    <section id="skills" className="py-20">
-      <div className="container  mx-auto px-4 py-16">
+    <section id="skills" className="py-20 px-4">
+      <div className="container  mx-auto ">
         <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
           Skills
         </h2>

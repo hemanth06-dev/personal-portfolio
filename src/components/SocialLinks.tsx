@@ -10,7 +10,7 @@ export function SocialLinks() {
       className="flex justify-center gap-6"
     >
       <a 
-        href="https://github.com" 
+        href="https://github.com/hemanth06-dev" 
         target="_blank" 
         rel="noopener noreferrer"
         className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -18,15 +18,14 @@ export function SocialLinks() {
         <Github className="w-7 h-7" />
       </a>
       <a 
-        href="https://linkedin.com" 
+        href="https://in.linkedin.com/in/hemanthkumar-ch-077373137" 
         target="_blank" 
-        rel="noopener noreferrer"
         className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
       >
         <Linkedin className="w-7 h-7" />
       </a>
       <a 
-        href="mailto:your.email@example.com"
+        href="mailto:hemanthkumarchereddy@gmail.com"
         className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
       >
         <Mail className="w-7 h-7" />

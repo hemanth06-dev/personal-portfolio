@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import { SkillItem } from './SkillItem';
 
 const Projects = () => {
   const projects = [
@@ -30,9 +31,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 to-gray-50 dark:to-gray-900">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Featured Projects</h2>
+    <section id="projects" className="py-20 px-4">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Featured Projects</h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -47,31 +48,26 @@ const Projects = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <h3 className="text-xl text-gray-600 dark:text-gray-300 font-semibold">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
+                     <SkillItem  skill={tech} delay = {1 + techIndex * 0.1}/>
                   ))}
                 </div>
                 
                 <div className="flex items-center gap-4">
                   <a 
                     href={project.liveLink}
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
+                    className="flex items-center gap-2 text-gray-600 dark:text-gray-300 font-semibold transition-colors"
                   >
                     <ExternalLink size={18} />
                     Live Demo
                   </a>
                   <a 
                     href={project.githubLink}
-                    className="flex items-center gap-2 text-gray-600 hover:text-gray-700 transition-colors"
+                    className="flex items-center gap-2 text-gray-600 dark:text-gray-300 font-semibold transition-colors"
                   >
                     <Github size={18} />
                     Code

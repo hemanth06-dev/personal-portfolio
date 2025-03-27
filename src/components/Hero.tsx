@@ -4,7 +4,7 @@ import { SocialLinks } from './SocialLinks';
 
 export function Hero() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4">
       {/* <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 z-0" /> */}
       
       <motion.div 
@@ -20,7 +20,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
         >
-          Your Name
+          Hemanthkumar Chereddy
         </motion.h1>
 
         <motion.p
